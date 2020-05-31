@@ -56,9 +56,9 @@
     </div>
   </header>
 
-  <main class="container">
+  <main>
     <h1 class="visually-hidden">Интернет-магазин инструмента и стройматериалов Техномарт</h1>
-    <section class="promo">
+    <section class="promo container">
       <h2 class="visually-hidden">Предложения</h2>
       <ul class="promo-list">
         <li class="promo-list-item promo-list-item-material">
@@ -73,6 +73,24 @@
           <h3>Техника</h3>
           <button class="promo-button" type="button">Для стройки</button>
         </li>
+        <li class="promo-list-item promo-list-item-slider">
+          <div class="sliders">
+            <div class="slider">
+              <!--<h3>Дрели</h3>
+              <p>Соседям на радость!</p>-->
+              <img src="img/drills-slider.jpg" width="620" height="266" alt="Широкий выбор дрелей, соседям на радость">
+              <!--<a class="button" href="catalog.html">Открыть каталог</a>-->
+            </div>
+            <!--<div class="slider">
+              <h3>Перфораторы</h3>
+              <p>Настоящие мужские игрушки</p>
+              <img src="img/perforator-slider.jpg" width="620" height="266" alt="Перфораторы, настоящие мужские игрушки">
+              <a class="button" href="catalog.html">Открыть каталог</a>
+            </div>-->
+            <!--<button type="button">Назад</button>
+            <button type="button">Вперед</button>-->
+          </div>
+        </li>
         <li class="promo-list-item promo-list-item-discount">
           <h3>Скидки 50%</h3>
           <button class="promo-button" type="button">На 350 товаров</button>
@@ -81,29 +99,13 @@
           <h3>Доставка</h3>
           <button class="promo-button" type="button">Бесплатно</button>
         </li>
-        <li class="promo-list-item promo-list-item-slider">
-          <div class="sliders">
-            <div class="slider">
-              <h3>Дрели</h3>
-              <p>Соседям на радость!</p>
-              <img src="img/drills-slider.jpg" width="620" height="266" alt="Широкий выбор дрелей, соседям на радость">
-              <a class="button" href="catalog.html">Открыть каталог</a>
-            </div>
-            <div class="slider">
-              <h3>Перфораторы</h3>
-              <p>Настоящие мужские игрушки</p>
-              <img src="img/perforator-slider.jpg" width="620" height="266" alt="Перфораторы, настоящие мужские игрушки">
-              <a class="button" href="catalog.html">Открыть каталог</a>
-            </div>
-            <button type="button">Назад</button>
-            <button type="button">Вперед</button>
-          </div>
-        </li>
       </ul>
     </section>
-    <section class="bestseller-products">
-      <h2 class="section-title section-title-index">Популярные товары:</h2>
-      <a class="button" href="catalog.html">Все популярные товары</a>
+    <section class="bestseller-products container">
+      <div class="bestseller-header">
+        <h2 class="section-title section-title-index">Популярные товары:</h2>
+        <a class="button bestseller-link" href="catalog.html">Все популярные товары</a>
+      </div>
       <ul class="bestseller-products-list">
         <li class="bestseller-products-list-item">
           <a href="#">
@@ -146,9 +148,11 @@
         </li>
       </ul>
     </section>
-    <section class="bestseller-brands">
-      <h2 class="section-title section-title-index">Популярные производители:</h2>
-      <a class="button" href="catalog.html">Все производители</a>
+    <section class="bestseller-brands container">
+      <div class="bestseller-brands-header">
+        <h2 class="section-title section-title-index">Популярные производители:</h2>
+        <a class="button bestseller-link" href="catalog.html">Все производители</a>
+      </div>
       <ul class="bestseller-brands-list">
         <li class="bestseller-brands-list-item">
           <a href="#">
@@ -193,30 +197,41 @@
       </ul>
     </section>
     <section class="services">
-      <h2>Сервисы</h2>
-      <p>
-        Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
-      </p>
-      <div class="delivery">
-        <h3>Доставка</h3>
+      <div class="container">
+        <h2>Сервисы</h2>
         <p>
-          Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж!
+          Хороший интернет-магазин отличается от плохого не только ценами!<br> Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
         </p>
-      </div>
-      <div class="guarantee">
-        <h3>Гарантия</h3>
-        <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
-      </div>
-      <div class="credit">
-        <h3>Кредит</h3>
-        <p>
-          Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
-        </p>
-        <a class="button" href="#">Подробнее о компании</a>
+        <div class="services-wrapper">
+          <ul class="services-list">
+            <li class="services-list-item services-list-item-current">Доставка</li>
+            <li class="services-list-item">Гарантия</li>
+            <li class="services-list-item">Кредит</li>
+          </ul>
+          <div class="services-description-wrapper">
+            <div class="delivery">
+              <h3>Доставка</h3>
+              <p>
+                Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br> Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!
+              </p>
+            </div>
+            <!--<div class="guarantee">
+            <h3>Гарантия</h3>
+            <p>Если купленный у нас товар поломается или заискрит, а также в случае пожара спровоцированного его возгоранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. Дом уж восстановите как-нибудь сами.</p>
+          </div>
+          <div class="credit">
+            <h3>Кредит</h3>
+            <p>
+              Залезть в долговую яму стало проще! Кредитные консультанты придут вам на помощь.
+            </p>
+            <a class="button" href="#">Подробнее о компании</a>
+          </div> -->
+          </div>
+        </div>
       </div>
     </section>
 
-    <div class="index-columns">
+    <div class="index-columns container">
       <section class="about">
         <h2>КОМПАНИЯ «Техномарт»</h2>
         <p>

@@ -514,6 +514,7 @@ img {
   display: grid;
   grid-template-columns: 220px 1fr;
   align-content: start;
+  margin-bottom: 60px;
 }
 
 .page-catalog-container .section-title {
@@ -684,7 +685,14 @@ img {
 
 /* Pagination */
 .pagination-list {
+  display: flex;
+  margin: 0;
+  margin-top: 50px;
   list-style: none;
+}
+
+.pagination-item {
+  margin-right: 10px;
 }
 
 .pagination-item a {
@@ -726,7 +734,17 @@ img {
 }
 
 /* Promo */
+.promo {
+  margin-bottom: 60px;
+}
+
 .promo-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
@@ -734,10 +752,29 @@ img {
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
+  margin: 0;
+  margin-top: 20px;
+  margin-left: 22px;
   color: var(--basic-white);
 }
 
+.promo-list-item {
+  width: 300px;
+  min-height: 123px;
+}
+
+.promo-list-item-slider {
+  grid-row: 2 / 4;
+  grid-column: 1 / 3;
+  width: 620px;
+  height: 266px;
+}
+
 .promo-list-item button {
+  margin: 0;
+  padding: 0;
+  margin-left: 22px;
+  margin-top: 14px;
   font-size: 14px;
   line-height: 18px;
   color: var(--basic-white);
@@ -765,23 +802,105 @@ img {
 }
 
 /* bestseller-products */
-.bestseller-products h2,
-.bestseller-brands h2 {
+.bestseller-header,
+.bestseller-brands-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
   background-color: var(--special-backgroundtitle);
 }
 
+.section-title-index {
+  margin: 0;
+  margin-left: 28px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.bestseller-link {
+  margin-right: 14px;
+}
+
 .bestseller-products-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 70px;
   list-style: none;
+}
+
+.bestseller-products-list-item {
+  width: 218px;
+  min-height: 320px;
+  border: 1px solid #EAEAEA;
+}
+
+.bestseller-products-list-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* bestseller-brands */
 .bestseller-brands-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 50px;
   list-style: none;
+}
+
+.bestseller-brands-list-item {
+  width: 218px;
+  min-height: 145px;
+  margin-bottom: 20px;
+  border: 1px solid #EAEAEA;
 }
 
 /* Services */
 .services {
   background-color: var(--basic-background);
+  padding-top: 65px;
+  margin-bottom: 70px;
+}
+
+.services h2 {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.services p {
+  margin-bottom: 67px;
+}
+
+.services-wrapper {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 80px;
+}
+
+.services-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.services-list-item {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-white);
+  background-color: var(--basic-grey);
+}
+
+.services-list-item-current {
+  color: var(--basic-grey);
+  background-color: var(--basic-white);
 }
 
 .delivery h3,
@@ -789,8 +908,25 @@ img {
 .credit h3 {
   font-size: 30px;
   line-height: 30px;
+  margin: 0;
+  margin-bottom: 30px;
   color: var(--basic-grey);
   text-transform: uppercase;
+}
+
+.delivery {
+  background-image: url("../img/delivery-car.png");
+  background-repeat: no-repeat;
+}
+
+.guarantee {
+  background-image: url("../img/guarantee.png");
+  background-repeat: no-repeat;
+}
+
+.credit {
+  background-image: url("../img/credit.png");
+  background-repeat: no-repeat;
 }
 
 /* Sliders */
