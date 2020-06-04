@@ -15,7 +15,7 @@
       <div class="header-navigation">
         <div class="container">
           <a class="header-logo">
-            <img src="img/logo-technomart.svg" width="185" height="18" alt="Логотип интернет-магазина Техномарт">
+            <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип интернет-магазина Техномарт">
           </a>
           <form class="search-form" action="#" method="POST">
             <input type="search" placeholder="Поиск:">
@@ -30,13 +30,22 @@
       <div class="header-info">
         <div class="container">
           <p class="header-text">Интернет-магазин<br> строительных материалов<br> и инструментов для ремонта</p>
-          <div class="contacts">
+          <div class="header-contacts">
             <a class="header-tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
             <p class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           </div>
           <div class="user-navigation">
-            <a class="login-link" href="#">Войти</a>
-            <a class="signup-link" href="#">Регистрация</a>
+            <div class="login-container">
+              <svg class="login-icon" width="20" height="17" viewBox="0 0 20 17">
+                <path fill="#c5c5c5" d="M14.875 8.5L6 0v6H0v5h6v6z" />
+                <path fill="#c5c5c5" d="M16.986 15.01h-5.027V17h5.027c2.178 0 3.004-1.81 3.029-3.026V3.028C19.99
+                 1.811 19.164 0 16.986 0h-5.027v1.99h5.027c.839 0 .992.681 1.01 1.057v10.904c-.017.376-.171 1.059-1.01 1.059z" />
+              </svg>
+              <a class="login-link" href="#">Войти</a>
+            </div>
+            <div class="signup-container">
+              <a class="signup-link" href="#">Регистрация</a>
+            </div>
           </div>
         </div>
       </div>
@@ -151,7 +160,7 @@
     <section class="bestseller-brands container">
       <div class="bestseller-brands-header">
         <h2 class="section-title section-title-index">Популярные производители:</h2>
-        <a class="button bestseller-link" href="catalog.html">Все производители</a>
+        <a class="button bestseller-brands-link" href="catalog.html">Все производители</a>
       </div>
       <ul class="bestseller-brands-list">
         <li class="bestseller-brands-list-item">
@@ -234,12 +243,12 @@
     <div class="index-columns container">
       <section class="about">
         <h2>КОМПАНИЯ «Техномарт»</h2>
-        <p>
+        <p class="about-text">
           Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров
           для ремонта и строительства не оставит равнодушными любителей сэкономить на гастарбайтерах.
         </p>
         <p>
-          Мы можем доставить ваш товар в самые отдаленные точки России!
+          Мы можем доставить ваш товар в самые отдаленные точки России!<br>
           Техномарт работает со многими транспортными компаниями:
         </p>
         <ul class="about-list">
@@ -247,7 +256,7 @@
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a class="button" href="#">Подробнее о компании</a>
+        <a class="button about-link" href="#">Подробнее о компании</a>
       </section>
       <section class="contacts">
         <h2>КОНТАКТЫ</h2>
@@ -255,7 +264,7 @@
         <a class="contacts-map" href="#">
           <img src="img/map.png" width="300" height="158" alt="Где мы находимся">
         </a>
-        <button class="button" type="button">Заблудились? Напишите нам!</button>
+        <button class="button contacts-link" type="button">Заблудились? Напишите нам!</button>
       </section>
     </div>
   </main>
