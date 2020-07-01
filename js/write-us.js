@@ -4,6 +4,7 @@ var writeusClose = writeusPopup.querySelector(".modal-close");
 var writeusForm = writeusPopup.querySelector(".write-us-container");
 var yourName = writeusPopup.querySelector("[name=name]");
 var yourEmail = writeusPopup.querySelector("[name=email]");
+var buttonSend = writeusPopup.querySelector(".button-send");
 
 var isStorageSupport = true;
 var storage = "";
@@ -32,7 +33,7 @@ writeusClose.addEventListener("click", function (evt) {
   writeusPopup.classList.remove("modal-error");
 });
 
-writeusForm.addEventListener("submit", function (evt) {
+buttonSend.addEventListener("click", function (evt) {
   if (!yourName.value || !yourEmail.value) {
   evt.preventDefault();
   writeusPopup.classList.remove("modal-error");

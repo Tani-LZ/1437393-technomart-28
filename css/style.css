@@ -29,6 +29,9 @@
   --special-backgroundcard: #161D29;
   --special-sorting: #F7F3EC;
   --special-cartpopup: #F1F1F1;
+  --special-redhover: #CA2C37;
+  --special-filterline: #E5E5E5;
+  --special-filterprice: #444444;
 }
 
 /* Global */
@@ -129,7 +132,7 @@ input[type="radio"].visually-hidden {
   width: 100%;
   height: 42px;
   padding-left: 42px;
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   color: var(--basic-white);
   background-color: var(--basic-greydark);
   background-image: url("../img/icon-search-opacity.svg");
@@ -154,7 +157,7 @@ input[type="radio"].visually-hidden {
 }
 
 input[type="search"]::placeholder {
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
@@ -286,6 +289,7 @@ input[type="search"]:focus::placeholder {
 
 .card-bookmark:active,
 .card-empty:active {
+  color: rgba(255, 255, 255, 0.5);
   background-color: var(--special-backgroundcard);
 }
 
@@ -320,7 +324,7 @@ input[type="search"]:focus::placeholder {
 
 .header-contacts {
   padding-top: 43px;
-  padding-right: 2px;
+  padding-right: 1px;
   display: flex;
   flex-direction: column;
 }
@@ -334,7 +338,7 @@ input[type="search"]:focus::placeholder {
 .header-contacts a {
   padding-top: 7px;
   padding-left: 74px;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .header-contacts p {
@@ -388,8 +392,8 @@ input[type="search"]:focus::placeholder {
 
 .user-navigation a {
   display: block;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 13px;
+  padding-bottom: 11px;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
@@ -542,8 +546,8 @@ input[type="search"]:focus::placeholder {
   display: block;
   margin: 0;
   padding: 0;
-  padding-top: 17px;
-  padding-bottom: 19px;
+  padding-top: 18px;
+  padding-bottom: 18px;
   padding-left: 27px;
   padding-right: 24px;
   color: var(--basic-white);
@@ -564,6 +568,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .site-navigation a:active {
+  color: rgba(255, 255, 255, 0.5);
   background-color: var(--basic-greyactive);
 }
 
@@ -581,6 +586,7 @@ input[type="search"]:focus::placeholder {
   margin: 0;
   padding: 0;
   margin-bottom: 23px;
+  letter-spacing: -1px;
 }
 
 .index-columns h2,
@@ -592,7 +598,7 @@ input[type="search"]:focus::placeholder {
 
 .index-columns p,
 .services p {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   margin: 0;
@@ -600,7 +606,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .contacts p {
-  margin-bottom: 32px;
+  margin-bottom: 33px;
 }
 
 .contacts a {
@@ -609,7 +615,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .about .about-text {
-  margin-bottom: 24px;
+  margin-bottom: 25px;
 }
 
 .contacts button {
@@ -668,7 +674,7 @@ input[type="search"]:focus::placeholder {
 .button-buy,
 .button-bookmark,
 .promo-button {
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -683,12 +689,17 @@ input[type="search"]:focus::placeholder {
   min-height: 36px;
   margin: 0;
   text-align: center;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   background-color: var(--basic-white);
   border: 1px solid #E5E5E5;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--special-redhover);
 }
 
 .button:active {
@@ -749,6 +760,7 @@ input[type="search"]:focus::placeholder {
   width: 135px;
   min-height: 38px;
   background-color: rgba(0, 0, 0, 0.3);
+  outline: none;
 }
 
 .promo-button:hover,
@@ -775,12 +787,13 @@ input[type="search"]:focus::placeholder {
   margin: 0;
   margin-top: 36px;
   margin-bottom: 34px;
+  margin-left: 1px;
   width: 240px;
 }
 
 .footer-navigation-wrapper .container {
   display: grid;
-  grid-template-columns: 325px 1fr;
+  grid-template-columns: 326px 1fr;
 }
 
 .footer-navigation-wrapper {
@@ -805,8 +818,9 @@ input[type="search"]:focus::placeholder {
 .footer-address p {
   margin: 0;
   padding: 0;
-  margin-top: 22px;
+  margin-top: 23px;
   margin-bottom: 54px;
+  padding-left: 3px;
   color: var(--basic-white);
 }
 
@@ -816,8 +830,8 @@ input[type="search"]:focus::placeholder {
   justify-content: flex-end;
   list-style: none;
   margin: 0;
-  margin-top: 37px;
-  margin-bottom: 35px;
+  margin-top: 38px;
+  margin-bottom: 34px;
 }
 
 .footer-navigation-list a {
@@ -880,6 +894,7 @@ input[type="search"]:focus::placeholder {
 
 .footer-contacts p {
   margin: 0;
+  margin-left: 1px;
 }
 
 .footer-contacts p:last-child {
@@ -937,7 +952,7 @@ input[type="search"]:focus::placeholder {
 
 /* Catalog */
 .inner-page {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -1001,7 +1016,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .section-title {
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   color: var(--basic-grey);
@@ -1015,6 +1030,7 @@ input[type="search"]:focus::placeholder {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: var(--special-backgroundblue);
+  letter-spacing: -0.7px;
 }
 
 /* Filters */
@@ -1027,7 +1043,7 @@ input[type="search"]:focus::placeholder {
 .filter fieldset {
   padding: 0;
   margin: 0;
-  margin-bottom: 41px;
+  margin-bottom: 42px;
   border: none;
 }
 
@@ -1041,7 +1057,7 @@ input[type="search"]:focus::placeholder {
   padding-bottom: 10px;
   padding-left: 18px;
   margin-bottom: 13px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
@@ -1113,24 +1129,49 @@ input[type="search"]:focus::placeholder {
 
 .price-controls label {
   text-transform: uppercase;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
 }
 
 .price-controls input {
-  width: 95px;
-  text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  text-align: center;
   color: #283136;
   border: none;
   border-radius: 5px;
   background: #F7F3EC;
   text-transform: uppercase;
-  font-family: "PT Sans", sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
+}
+
+.min-price input {
+  width: 73px;
+  padding-left: 18px;
+}
+
+.max-price input {
+  width: 76px;
+  padding-left: 15px;
+}
+
+.price-dash {
+  position: relative;
+  width: 30px;
+  height: 38px;
+}
+
+.price-dash::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 1px;
+  top: 21px;
+  left: 10px;
+  background-color: var(--special-filterprice);
 }
 
 .separator-line-1::after {
@@ -1140,7 +1181,7 @@ input[type="search"]:focus::placeholder {
   left: 0;
   width: 220px;
   height: 1px;
-  background-color: #E5E5E5;
+  background-color: var(--special-filterline);
 }
 
 .separator-line-2::after {
@@ -1291,7 +1332,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .filter-price-label {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1321,7 +1362,8 @@ input[type="search"]:focus::placeholder {
 }
 
 .sorting-list li:first-child {
-  margin-right: 71px;
+  margin-left: 2px;
+  margin-right: 70px;
 }
 
 .sorting-list li:nth-child(2) {
@@ -1337,7 +1379,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .catalog-sorting h3 {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
@@ -1348,12 +1390,17 @@ input[type="search"]:focus::placeholder {
 }
 
 .sorting-list-item a {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   border-bottom: 1px dotted #EE3643;
+}
+
+.sorting-list-item-current a {
+  color: var(--basic-red);
+  border: none;
 }
 
 .sorting-list-item-icon a {
@@ -1363,7 +1410,7 @@ input[type="search"]:focus::placeholder {
 .sorting-list-item a:hover,
 .sorting-list-item a:focus {
   color: var(--basic-black);
-  border-bottom: 1px solid #EE3643;
+  border: none;
 }
 
 .sorting-list-item a:active {
@@ -1477,7 +1524,7 @@ input[type="search"]:focus::placeholder {
 
 .catalog-item h3 {
   margin: 0;
-  margin-top: 29px;
+  margin-top: 31px;
   margin-left: 30px;
   margin-right: 30px;
 }
@@ -1491,8 +1538,8 @@ input[type="search"]:focus::placeholder {
 .catalog-item img {
   width: 144px;
   height: 128px;
-  margin-top: 22px;
-  object-fit: contain;
+  margin-top: 21px;
+  margin-left: -12px;
   background-color: var(--basic-white);
 }
 
@@ -1514,9 +1561,12 @@ input[type="search"]:focus::placeholder {
   line-height: 18px;
 }
 
-.catalog-item .catalog-price-old,
-.bestseller-products-list-item .catalog-price-old {
+.catalog-item .catalog-price-old {
   margin-top: 8px;
+}
+
+.bestseller-products-list-item .catalog-price-old {
+  margin-top: 9px;
   margin-bottom: 13px;
 }
 
@@ -1539,7 +1589,7 @@ input[type="search"]:focus::placeholder {
   position: absolute;
   top: 269px;
   left: 77px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -1554,7 +1604,7 @@ input[type="search"]:focus::placeholder {
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
-  margin-top: 29px;
+  margin-top: 30px;
   margin-left: 20px;
   list-style: none;
 }
@@ -1609,14 +1659,15 @@ input[type="search"]:focus::placeholder {
   padding: 0;
   margin: 0;
   margin-bottom: 25px;
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', Arial,  sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
+  letter-spacing: -0.7px;
 }
 
 .perforator-info p {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   margin: 0;
@@ -1626,7 +1677,7 @@ input[type="search"]:focus::placeholder {
 /* Promo */
 .promo {
   margin-top: 59px;
-  margin-bottom: 59px;
+  margin-bottom: 60px;
 }
 
 .promo-list {
@@ -1770,6 +1821,7 @@ input[type="search"]:focus::placeholder {
   margin-left: 28px;
   margin-top: 29px;
   margin-bottom: 30px;
+  letter-spacing: -0.8px;
 }
 
 .bestseller-link {
@@ -1793,7 +1845,7 @@ input[type="search"]:focus::placeholder {
 .bestseller-products-list-item {
   box-sizing: border-box;
   width: 220px;
-  min-height: 320px;
+  min-height: 318px;
   border: 1px solid #EAEAEA;
 }
 
@@ -1802,7 +1854,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .bestseller-products-list-item h3 {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -1874,11 +1926,13 @@ input[type="search"]:focus::placeholder {
   margin: 0;
   margin-left: 5px;
   margin-bottom: 25px;
+  letter-spacing: -1px;
 }
 
 .services p {
   margin-left: 5px;
-  margin-bottom: 68px;
+  margin-bottom: 67px;
+  line-height: 25px;
 }
 
 .services-wrapper {
@@ -1886,9 +1940,6 @@ input[type="search"]:focus::placeholder {
   grid-template-columns: 240px 1fr;
   gap: 80px;
   margin-left: 5px;
-}
-
-.services-description-wrapper {
 }
 
 .services-list {
@@ -1928,12 +1979,22 @@ input[type="search"]:focus::placeholder {
 }
 
 .services-list-item-current {
+  padding-top: 16px;
   background-color: var(--basic-white);
   box-shadow: 0px 1px 0px #FFFFFF;
 }
 
+.services-list-item:last-child {
+  padding-bottom: 17px;
+}
+
 .services-list-item-current a {
   color: var(--basic-grey);
+}
+
+.services-list-item:hover:not(.services-list-item-current),
+.services-list-item:focus:not(.services-list-item-current) {
+  background-color: var(--basic-greydark);
 }
 
 .delivery h3,
@@ -1942,10 +2003,10 @@ input[type="search"]:focus::placeholder {
   font-size: 30px;
   line-height: 30px;
   margin: 0;
-
-  margin-bottom: 30px;
+  margin-bottom: 29px;
   color: var(--basic-grey);
   text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
 .guarantee h3 {
@@ -2039,7 +2100,7 @@ input[type="search"]:focus::placeholder {
 
 .slider-link {
   position: absolute;
-  bottom: 27px;
+  bottom: 26px;
   left: 24px;
   display: block;
   padding: 10px 47px;
@@ -2138,6 +2199,7 @@ input[type="search"]:focus::placeholder {
   background-position: 0 0;
   border: none;
   cursor: pointer;
+  z-index: 3;
 }
 
 /* Map */
@@ -2149,12 +2211,19 @@ input[type="search"]:focus::placeholder {
   border-top: 7px solid var(--basic-red);
 }
 
-.modal-map img {
+.modal-map p {
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  z-index: 1;
 }
 
 .modal-map iframe {
+  position: relative;
   border: none;
+  z-index: 2;
 }
 
 
@@ -2199,7 +2268,7 @@ input[type="search"]:focus::placeholder {
   padding-top: 7px;
   padding-bottom: 7px;
   padding-left: 12px;
-  font-family: "PT Sans" sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--special-price);
@@ -2212,7 +2281,7 @@ input[type="search"]:focus::placeholder {
   margin-top: 11px;
   padding-top: 7px;
   padding-left: 12px;
-  font-family: "PT Sans" sans-serif;
+  font-family: 'PT Sans', Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--special-price);
@@ -2265,7 +2334,7 @@ input[type="search"]:focus::placeholder {
   margin: 0;
   padding-top: 66px;
   padding-bottom: 68px;
-  font-family: 'Cuprum', sans-serif;
+  font-family: 'Cuprum', Arial, sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
