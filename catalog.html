@@ -14,7 +14,7 @@
     <div class="main-header-navigation-wrapper">
       <div class="container">
         <div class="header-navigation">
-          <a class="header-logo">
+          <a class="header-logo" href="index.html">
             <img src="img/logo-technomart.svg" width="108" height="18" alt="Логотип интернет-магазина Техномарт">
           </a>
           <form class="search-form" action="#" method="POST">
@@ -44,13 +44,13 @@
                   2.416-.95.724-3.063 1.654-5.207 2.39S0 18 0 18h20s.025-3.099-2.119-3.834z" />
             </svg>
             <a class="user-name" href="#">Равшан Джамшутович</a>
-            <svg class="icon-logout" width="21" height="17" viewBox="0 0 21 17">
+            <a class="icon-logout" href="#"><svg width="21" height="17" viewBox="0 0 21 17">
               <g fill="#c5c5c5">
                 <path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z" />
                 <path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938
                    0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z" />
               </g>
-            </svg>
+            </svg></a>
           </div>
           <div class="user-account-wrapper">
             <a class="user-account" href="#">Мои заказы</a>
@@ -73,7 +73,6 @@
         </ul>
       </div>
     </nav>
-
   </header>
 
   <main class="inner-page">
@@ -121,9 +120,8 @@
                   <input type="number" name="max-price" value="30000">
                 </label>
               </div>
-              <div class="separator-line-1"></div>
+              <div class="filter-line-up"></div>
             </div>
-
           </fieldset>
           <fieldset>
             <legend>Производители:</legend>
@@ -149,7 +147,7 @@
                 <label for="filter-hitachi">HITACHI</label>
               </li>
             </ul>
-            <div class="separator-line-2"></div>
+            <div class="filter-line-down"></div>
           </fieldset>
           <fieldset>
             <legend>Питание:</legend>
@@ -167,6 +165,7 @@
           <button class="filter-button" type="button">Показать</button>
         </form>
       </section>
+
       <section>
         <h2 class="visually-hidden">Список товаров</h2>
         <div class="catalog-sorting">
@@ -314,6 +313,7 @@
         </ul>
       </section>
     </div>
+
     <section class="perforator-info">
       <div class="container">
         <h2>Пара слов о перфораторах</h2>
@@ -368,7 +368,6 @@
               </ul>
             </section>
           </div>
-
         </div>
       </div>
       <div class="footer-contacts-wrapper">
@@ -416,7 +415,6 @@
     </div>
   </footer>
 
-
   <section class="modal modal-cart-message">
     <div class="cart-message">
       <div class="icon-mark"></div>
@@ -431,7 +429,5 @@
 
   <script src="js/message.js"></script>
 
-
 </body>
-
 </html>

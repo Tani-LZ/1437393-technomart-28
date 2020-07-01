@@ -1,5 +1,4 @@
 /* Variables */
-
 :root {
   --basic-red: #EE3643;
   --basic-green: #63A63E;
@@ -11,7 +10,6 @@
   --basic-white: #ffffff;
   --basic-wight-active: rgba(255, 255, 255, 0.5);
   --basic-greyactive: #1D2739;
-
   --special-yellow: #FFBF47;
   --special-blue: #3BBCE3;
   --special-lilac: #DC91D8;
@@ -39,7 +37,7 @@ body {
   min-width: 960px;
   margin: 0;
   padding: 0;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-black);
@@ -71,7 +69,6 @@ input[type="radio"].visually-hidden {
 }
 
 /* Grid */
-
 .page {
   height: 100%;
 }
@@ -132,7 +129,7 @@ input[type="radio"].visually-hidden {
   width: 100%;
   height: 42px;
   padding-left: 42px;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   color: var(--basic-white);
   background-color: var(--basic-greydark);
   background-image: url("../img/icon-search-opacity.svg");
@@ -157,7 +154,7 @@ input[type="radio"].visually-hidden {
 }
 
 input[type="search"]::placeholder {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
@@ -476,6 +473,10 @@ input[type="search"]:focus::placeholder {
   margin-right: 22px;
 }
 
+.icon-logout {
+  margin-top: 4px;
+}
+
 .user-icon:hover path,
 .user-icon:focus path,
 .icon-logout:hover path,
@@ -515,7 +516,6 @@ input[type="search"]:focus::placeholder {
   background: linear-gradient(0deg, #32425C, #32425C), #FFFFFF;
   border-radius: 50%;
 }
-
 
 /* Header main navigation */
 .main-navigation .container {
@@ -557,6 +557,7 @@ input[type="search"]:focus::placeholder {
   padding-left: 52px;
   padding-right: 31px;
 }
+
 .site-navigation li:last-child a {
   padding-left: 34px;
   padding-right: 47px;
@@ -598,7 +599,7 @@ input[type="search"]:focus::placeholder {
 
 .index-columns p,
 .services p {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   margin: 0;
@@ -632,7 +633,7 @@ input[type="search"]:focus::placeholder {
 
 .about-list li {
   position: relative;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   padding-left: 37px;
@@ -644,9 +645,19 @@ input[type="search"]:focus::placeholder {
   content: "";
   width: 25px;
   height: 2px;
-  top: 12px;
+  top: 11px;
   left: 0;
   background-color: var(--basic-red);
+}
+
+.about-list li:first-child::before {
+  top: 13px;
+  left: 0;
+}
+
+.about-list li:last-child::before {
+  top: 10px;
+  left: 0;
 }
 
 .about-link {
@@ -661,6 +672,7 @@ input[type="search"]:focus::placeholder {
   width: 300px;
   padding-top: 10px;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 
 /* buttons */
@@ -668,13 +680,14 @@ input[type="search"]:focus::placeholder {
 .button-buy,
 .button-bookmark {
   background-color: var(--basic-red);
+  outline: none;
 }
 
 .button,
 .button-buy,
 .button-bookmark,
 .promo-button {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -689,12 +702,14 @@ input[type="search"]:focus::placeholder {
   min-height: 36px;
   margin: 0;
   text-align: center;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
   background-color: var(--basic-white);
   border: 1px solid #E5E5E5;
+  cursor: pointer;
+  outline: none;
 }
 
 .button:hover,
@@ -952,7 +967,7 @@ input[type="search"]:focus::placeholder {
 
 /* Catalog */
 .inner-page {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
 }
@@ -1016,7 +1031,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .section-title {
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   color: var(--basic-grey);
@@ -1057,7 +1072,7 @@ input[type="search"]:focus::placeholder {
   padding-bottom: 10px;
   padding-left: 18px;
   margin-bottom: 13px;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
@@ -1079,7 +1094,6 @@ input[type="search"]:focus::placeholder {
 }
 
 .range-controls {
-
   height: 41px;
   margin-bottom: 9px;
   padding-top: 39px;
@@ -1143,7 +1157,7 @@ input[type="search"]:focus::placeholder {
   border-radius: 5px;
   background: #F7F3EC;
   text-transform: uppercase;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
 }
@@ -1174,7 +1188,7 @@ input[type="search"]:focus::placeholder {
   background-color: var(--special-filterprice);
 }
 
-.separator-line-1::after {
+.filter-line-up::after {
   position: absolute;
   content: "";
   top: 154px;
@@ -1184,7 +1198,7 @@ input[type="search"]:focus::placeholder {
   background-color: var(--special-filterline);
 }
 
-.separator-line-2::after {
+.filter-line-down::after {
   position: absolute;
   content: "";
   top: 515px;
@@ -1219,7 +1233,7 @@ input[type="search"]:focus::placeholder {
   user-select: none;
 }
 
-.filter-input-checkbox + label::before {
+.filter-input-checkbox+label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1231,7 +1245,7 @@ input[type="search"]:focus::placeholder {
   background-position: 0 0;
 }
 
-.filter-input-checkbox:checked + label::before {
+.filter-input-checkbox:checked+label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1243,7 +1257,7 @@ input[type="search"]:focus::placeholder {
   background-position: 0 0;
 }
 
-.filter-input-checkbox:disabled + label {
+.filter-input-checkbox:disabled+label {
   opacity: 0.3;
 }
 
@@ -1251,7 +1265,7 @@ input[type="search"]:focus::placeholder {
   opacity: 0.3;
 }
 
-.filter-input-radio + label::before {
+.filter-input-radio+label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1263,7 +1277,7 @@ input[type="search"]:focus::placeholder {
   background-position: 0 0;
 }
 
-.filter-input-radio:checked + label::before {
+.filter-input-radio:checked+label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1275,7 +1289,7 @@ input[type="search"]:focus::placeholder {
   background-position: 0 0;
 }
 
-.filter-input-checkbox:hover + label::before {
+.filter-input-checkbox:hover+label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1287,7 +1301,7 @@ input[type="search"]:focus::placeholder {
   background-position: 0 0;
 }
 
-.filter-input-checkbox:checked:hover + label::before {
+.filter-input-checkbox:checked:hover+label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1299,7 +1313,7 @@ input[type="search"]:focus::placeholder {
   background-position: 0 0;
 }
 
-.filter-input-radio:hover + label::before {
+.filter-input-radio:hover+label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1311,7 +1325,7 @@ input[type="search"]:focus::placeholder {
   background-position: 0 0;
 }
 
-.filter-input-radio:checked:hover + label::before {
+.filter-input-radio:checked:hover+label::before {
   content: "";
   position: absolute;
   top: -2px;
@@ -1323,7 +1337,7 @@ input[type="search"]:focus::placeholder {
   background-position: 0 0;
 }
 
-.filter-input-radio:disabled + label {
+.filter-input-radio:disabled+label {
   opacity: 0.3;
 }
 
@@ -1332,7 +1346,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .filter-price-label {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
   text-transform: uppercase;
@@ -1379,7 +1393,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .catalog-sorting h3 {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: normal;
   font-size: 13px;
   line-height: 18px;
@@ -1390,7 +1404,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .sorting-list-item a {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
@@ -1510,7 +1524,7 @@ input[type="search"]:focus::placeholder {
 
 .catalog-item:hover h3,
 .catalog-item:focus h3 {
-  margin-top: 179px;
+  margin-top: 180px;
 }
 
 .bestseller-products-list-item:hover h3,
@@ -1581,6 +1595,10 @@ input[type="search"]:focus::placeholder {
 }
 
 .catalog-price-old span {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
   color: var(--special-price);
   text-decoration: line-through;
 }
@@ -1589,7 +1607,7 @@ input[type="search"]:focus::placeholder {
   position: absolute;
   top: 269px;
   left: 77px;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -1659,7 +1677,7 @@ input[type="search"]:focus::placeholder {
   padding: 0;
   margin: 0;
   margin-bottom: 25px;
-  font-family: 'Cuprum', Arial,  sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -1667,7 +1685,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .perforator-info p {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   margin: 0;
@@ -1854,7 +1872,7 @@ input[type="search"]:focus::placeholder {
 }
 
 .bestseller-products-list-item h3 {
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 20px;
@@ -2126,7 +2144,7 @@ input[type="search"]:focus::placeholder {
   cursor: pointer;
 }
 
- .slider-controls .current {
+.slider-controls .current {
   background-color: var(--basic-red);
   border: 2px solid var(--basic-white);
 }
@@ -2226,7 +2244,6 @@ input[type="search"]:focus::placeholder {
   z-index: 2;
 }
 
-
 /*Write us */
 .write-us {
   box-sizing: border-box;
@@ -2256,6 +2273,7 @@ input[type="search"]:focus::placeholder {
   margin: 0;
   padding: 0;
 }
+
 .write-us-name,
 .write-us-email {
   margin-top: 39px;
@@ -2268,7 +2286,7 @@ input[type="search"]:focus::placeholder {
   padding-top: 7px;
   padding-bottom: 7px;
   padding-left: 12px;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--special-price);
@@ -2281,7 +2299,7 @@ input[type="search"]:focus::placeholder {
   margin-top: 11px;
   padding-top: 7px;
   padding-left: 12px;
-  font-family: 'PT Sans', Arial, sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--special-price);
@@ -2305,7 +2323,7 @@ input[type="search"]:focus::placeholder {
 
 /*cart-message*/
 .modal-cart-message {
-  top:120px;
+  top: 120px;
   bottom: auto;
   width: 620px;
   height: 283px;
@@ -2334,7 +2352,7 @@ input[type="search"]:focus::placeholder {
   margin: 0;
   padding-top: 66px;
   padding-bottom: 68px;
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-weight: bold;
   font-size: 24px;
   line-height: 30px;
@@ -2364,12 +2382,16 @@ input[type="search"]:focus::placeholder {
   background-color: var(--basic-white);
 }
 
+.continue-button:hover,
+.continue-button:focus {
+  background-color: var(--basic-white);
+}
+
 .cart-buttons .button:last-child {
   margin-right: 0;
 }
 
 /* Animations */
-
 @keyframes bounce {
   0% {
     transform: translateY(-2000px);
@@ -2389,6 +2411,7 @@ input[type="search"]:focus::placeholder {
 }
 
 @keyframes shake {
+
   0%,
   100% {
     transform: translateX(0);
