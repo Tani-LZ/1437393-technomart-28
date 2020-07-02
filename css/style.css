@@ -63,7 +63,8 @@ input[type="radio"].visually-hidden {
   border: 0;
   padding: 0;
   white-space: nowrap;
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -76,6 +77,7 @@ input[type="radio"].visually-hidden {
 .page-body {
   min-height: 100%;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
 }
@@ -117,6 +119,10 @@ input[type="radio"].visually-hidden {
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
+.header-logo:active {
+  background-color: var(--special-error);
+}
+
 .search-form {
   position: relative;
   width: 271px;
@@ -153,11 +159,35 @@ input[type="radio"].visually-hidden {
   background-position: top 12px left 17px;
 }
 
+input[type="search"]::-webkit-input-placeholder {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
+input[type="search"]::-moz-placeholder {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--basic-white);
+}
+
 input[type="search"]::placeholder {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   color: var(--basic-white);
+}
+
+input[type="search"]:focus::-webkit-input-placeholder {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
+}
+
+input[type="search"]:focus::-moz-placeholder {
+  color: var(--basic-black);
+  background-color: var(--basic-white);
 }
 
 input[type="search"]:focus::placeholder {
@@ -313,6 +343,7 @@ input[type="search"]:focus::placeholder {
   padding: 0;
   padding-left: 30px;
   padding-top: 43px;
+  padding-bottom: 44px;
   font-style: italic;
   font-size: 16px;
   line-height: 23px;
@@ -771,6 +802,11 @@ input[type="search"]:focus::placeholder {
   border: 3px solid #32425C;
 }
 
+.button-bookmark:active {
+  border: 3px solid #32425C;
+  opacity: 0.5;
+}
+
 .promo-button {
   width: 135px;
   min-height: 38px;
@@ -836,7 +872,7 @@ input[type="search"]:focus::placeholder {
   margin-top: 23px;
   margin-bottom: 54px;
   padding-left: 3px;
-  color: var(--basic-white);
+  color: var(--basic-background);
 }
 
 .footer-navigation-list {
@@ -852,7 +888,7 @@ input[type="search"]:focus::placeholder {
 .footer-navigation-list a {
   display: block;
   padding-left: 59px;
-  color: var(--basic-white);
+  color: var(--basic-background);
 }
 
 .footer-navigation-list:last-child {
@@ -1201,7 +1237,7 @@ input[type="search"]:focus::placeholder {
 .filter-line-down::after {
   position: absolute;
   content: "";
-  top: 515px;
+  top: 512px;
   left: 0;
   width: 220px;
   height: 1px;
@@ -1230,7 +1266,9 @@ input[type="search"]:focus::placeholder {
   position: relative;
   display: block;
   cursor: pointer;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 .filter-input-checkbox+label::before {
@@ -1554,6 +1592,8 @@ input[type="search"]:focus::placeholder {
   height: 128px;
   margin-top: 21px;
   margin-left: -12px;
+  -o-object-fit: contain;
+     object-fit: contain;
   background-color: var(--basic-white);
 }
 
@@ -1853,7 +1893,8 @@ input[type="search"]:focus::placeholder {
 .bestseller-products-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 20px;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
   padding: 0;
   margin: 0;
   margin-bottom: 70px;
@@ -2196,12 +2237,15 @@ input[type="search"]:focus::placeholder {
 
 .modal-show {
   display: block;
-  animation-name: bounce;
-  animation: bounce 0.6s;
+  -webkit-animation-name: bounce;
+          animation-name: bounce;
+  -webkit-animation: bounce 0.6s;
+          animation: bounce 0.6s;
 }
 
 .modal-error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 /* Modal close */
@@ -2392,6 +2436,23 @@ input[type="search"]:focus::placeholder {
 }
 
 /* Animations */
+@-webkit-keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 @keyframes bounce {
   0% {
     transform: translateY(-2000px);
@@ -2407,6 +2468,29 @@ input[type="search"]:focus::placeholder {
 
   100% {
     transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
   }
 }
 
