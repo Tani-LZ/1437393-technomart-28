@@ -6,7 +6,7 @@
   <title>Каталог интернет-магазина Техномарт</title>
   <link href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-min.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -45,12 +45,12 @@
             </svg>
             <a class="user-name" href="#">Равшан Джамшутович</a>
             <a class="icon-logout" href="#"><svg width="21" height="17" viewBox="0 0 21 17">
-              <g fill="#c5c5c5">
-                <path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z" />
-                <path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938
-                   0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z" />
-              </g>
-            </svg></a>
+                <g fill="#c5c5c5">
+                  <path fill="#c5c5c5" d="M21 8.5L12.125 0v6h-6v5h6v6z" />
+                  <path fill="#c5c5c5" d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938
+                   0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/>
+                </g>
+              </svg></a>
           </div>
           <div class="user-account-wrapper">
             <a class="user-account" href="#">Мои заказы</a>
@@ -120,7 +120,6 @@
                   <input type="number" name="max-price" value="30000">
                 </label>
               </div>
-              <div class="filter-line-up"></div>
             </div>
           </fieldset>
           <fieldset>
@@ -149,7 +148,6 @@
             </ul>
           </fieldset>
           <fieldset>
-            <div class="filter-line-down"></div>
             <legend>Питание:</legend>
             <ul>
               <li class="filter-option filter-radio">
@@ -202,7 +200,7 @@
                 <img src="img/catalog-item-1.jpg" width="144" height="128" alt="BOSCH BFG 6000">
                 <h3>Перфоратор BOSCH BFG 6000</h3>
                 <p class="catalog-price-old"><span>30500 Р.</span></p>
-                <p class="catalog-price-new"><span>25500 Р.</span></p>
+                <div class="catalog-price-new"><span class="price-new">25500 Р.</span></div>
               </a>
               <div class="catalog-item-buttons">
                 <button class="button-buy" type="button">Купить</button>
@@ -214,7 +212,7 @@
                 <img src="img/catalog-item-1.jpg" width="144" height="128" alt="BOSCH BFG 6000">
                 <h3>Перфоратор BOSCH BFG 6000</h3>
                 <p class="catalog-price-old"><span>30500 Р.</span></p>
-                <p class="catalog-price-new"><span>25500 Р.</span></p>
+                <div class="catalog-price-new"><span class="price-new">25500 Р.</span></div>
               </a>
               <div class="catalog-item-buttons">
                 <button class="button-buy" type="button">Купить</button>
@@ -226,7 +224,7 @@
                 <img src="img/catalog-item-1.jpg" width="144" height="128" alt="BOSCH BFG 6000">
                 <h3>Перфоратор BOSCH BFG 6000</h3>
                 <p class="catalog-price-old"><span>30500 Р.</span></p>
-                <p class="catalog-price-new"><span>25500 Р.</span></p>
+                <div class="catalog-price-new"><span class="price-new">25500 Р.</span></div>
               </a>
               <div class="catalog-item-buttons">
                 <button class="button-buy" type="button">Купить</button>
@@ -238,7 +236,7 @@
                 <img src="img/catalog-item-2.jpg" width="144" height="128" alt="BOSCH BFG 3000">
                 <h3>Перфоратор BOSCH BFG 3000</h3>
                 <p class="catalog-price-old"><span>22500 Р.</span></p>
-                <p class="catalog-price-new"><span>15500 Р.</span></p>
+                <div class="catalog-price-new"><span class="price-new">15500 Р.</span></div>
               </a>
               <div class="catalog-item-buttons">
                 <button class="button-buy" type="button">Купить</button>
@@ -250,7 +248,7 @@
                 <img src="img/catalog-item-1.jpg" width="144" height="128" alt="BOSCH BFG 6000">
                 <h3>Перфоратор BOSCH BFG 6000</h3>
                 <p class="catalog-price-old"><span>30500 Р.</span></p>
-                <p class="catalog-price-new"><span>25500 Р.</span></p>
+                <div class="catalog-price-new"><span class="price-new">25500 Р.</span></div>
               </a>
               <div class="catalog-item-buttons">
                 <button class="button-buy" type="button">Купить</button>
@@ -273,7 +271,7 @@
                 <img src="img/catalog-item-2.jpg" width="144" height="128" alt="BOSCH BFG 3000">
                 <h3>Перфоратор BOSCH BFG 3000</h3>
                 <p class="catalog-price-old"><span>22500 Р.</span></p>
-                <p class="catalog-price-new"><span>15500 Р.</span></p>
+                <div class="catalog-price-new"><span class="price-new">15500 Р.</span></div>
               </a>
               <div class="catalog-item-buttons">
                 <button class="button-buy" type="button">Купить</button>
@@ -285,7 +283,7 @@
                 <img src="img/catalog-item-1.jpg" width="144" height="128" alt="BOSCH BFG 6000">
                 <h3>Перфоратор BOSCH BFG 6000</h3>
                 <p class="catalog-price-old"><span>30500 Р.</span></p>
-                <p class="catalog-price-new"><span>25500 Р.</span></p>
+                <div class="catalog-price-new"><span class="price-new">25500 Р.</span></div>
               </a>
               <div class="catalog-item-buttons">
                 <button class="button-buy" type="button">Купить</button>
@@ -338,7 +336,7 @@
       <div class="footer-navigation-wrapper">
         <div class="container">
           <div class="footer-navigation-columns">
-            <a class="main-footer-logo" href="#"><img src="img/logo-technomart.svg" width="138" height="23" alt="Логотип интернет-магазина Техномарт"></a>
+            <a class="main-footer-logo" href="index.html"><img src="img/logo-technomart.svg" width="138" height="23" alt="Логотип интернет-магазина Техномарт"></a>
             <section class="footer-address">
               <h2 class="visually-hidden">Как нас найти</h2>
               <p>
@@ -427,7 +425,8 @@
     </div>
   </section>
 
-  <script src="js/message.js"></script>
+  <script src="js/message-min.js"></script>
 
 </body>
+
 </html>
